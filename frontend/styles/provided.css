@@ -1,0 +1,148 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  height: 100%;
+  font-family: -apple-system, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+#header-profile {
+  display: flex;
+}
+
+#profile-link {
+  padding-right: 1rem;
+}
+
+#page-login,
+#page-register,
+#page-profile-screen {
+  padding: 10vh 6vw;
+}
+
+#page-profile-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  padding-left: 1em;
+}
+
+#message-input-container {
+  position: fixed;
+  bottom: 0;
+  left: 18vw;
+  right: 2vw;
+  width: 80vw;
+  height: 5vh;
+  background-color: #fff;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+#image-input {
+  padding-left: 1rem;
+}
+#end-indicator {
+  margin-bottom: 2vh;
+}
+
+.emoji-popup {
+  display: none;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  z-index: 999;
+}
+
+.message {
+  position: relative;
+}
+
+.message:hover .emoji-popup {
+  display: block;
+}
+
+.dropdown {
+  position: relative;
+}
+
+#pin-button {
+  margin-bottom: 5rem;
+  margin-left: 1rem;
+  font-size: 1vw;
+}
+
+.image-thumbnail {
+  width: 4.5vw;
+  height: auto;
+  cursor: pointer;
+}
+
+.image-enlarged {
+  width: 20vw;
+  height: auto;
+}
+
+#page-dashboard {
+  height: 85vh;
+  overflow: auto;
+}
+
+#edit-channel-button,
+#invite-users-button,
+#leave-channel-button,
+#filter-dropdown {
+  margin-bottom: 0.7rem;
+}
+
+#page-profile-screen button {
+  margin-right: 0.5rem;
+}
+
+#join-channel-button {
+  margin-top: 0.7rem;
+}
+
+/* Media query for larger screens, tablets and desktop */
+@media (min-width: 768px) {
+  #sidebar {
+    position: fixed;
+    top: 5rem;
+    overflow-y: auto; /* Add scroll if the channel list overflows */
+  }
+}
+
+/* Media query for small screens, create good mobile experience */
+@media (max-width: 550px) {
+  .message-content {
+    font-size: 3vw;
+  }
+
+  #message-input-container {
+    font-size: 1.5vw;
+    width: 100vw;
+    left: 0;
+    right: 0;
+  }
+
+  #message-input-container input,
+  #message-input-container button {
+    font-size: 3vw;
+  }
+
+  .image-thumbnail {
+    width: 7vw;
+  }
+
+  footer {
+    display: none;
+  }
+}
